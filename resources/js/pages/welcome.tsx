@@ -8,7 +8,7 @@ export default function Welcome() {
             <Head title="Dogo Group — Un idioma, carta a carta">
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
                 <link
-                    href="https://fonts.googleapis.com/css2?family=Anta&family=Lato:wght@400;700&family=Noto+Sans+SC:wght@300&display=swap"
+                    href="https://fonts.googleapis.com/css2?family=Anta&family=Lato:wght@400;700&family=Noto+Sans+SC:wght@400&display=swap"
                     rel="stylesheet"
                 />
             </Head>
@@ -72,7 +72,7 @@ export default function Welcome() {
                                 </div>
                                 <div className="absolute inset-0 flex rotate-y-180 flex-col gap-2 rounded-[20px] border border-line bg-white p-4 shadow-[0_12px_32px_rgba(17,17,17,0.08)] backface-hidden">
                                     <div className="flex min-h-0 flex-1 items-center justify-center">
-                                        <span className="font-hanzi text-8xl leading-none font-light">狮子</span>
+                                        <span className="font-hanzi text-8xl leading-none">狮子</span>
                                     </div>
                                     <div className="pb-6 text-center">
                                         <span className="font-lato text-4xl tracking-[0.02em]">shīzi</span>
