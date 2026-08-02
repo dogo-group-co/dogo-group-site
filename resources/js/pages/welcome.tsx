@@ -63,7 +63,7 @@ export default function Welcome() {
                                         <img
                                             src="/images/leon.png"
                                             alt="Ilustración de un león"
-                                            className="max-h-[80%] max-w-[80%] object-contain"
+                                            className="max-h-[65%] max-w-[65%] object-contain"
                                         />
                                     </div>
                                     <div className="pb-6 text-center">
