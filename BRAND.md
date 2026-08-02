@@ -28,9 +28,9 @@ Todo lo demás vive en tinta sobre papel. Selección de texto: fondo rojo sello,
 | ----------------------- | ----------- | -------------------- |
 | Anta                    | 400         | Marca y titulares    |
 | Lato                    | 400 / 700   | Texto de las cartas  |
-| Jua + Noto Serif SC     | 500–700     | Caracteres chinos    |
+| Jua + ZCOOL KuaiLe      | 400–600     | Caracteres chinos (Jua no tiene glifos hanzi; los renderiza ZCOOL KuaiLe, con Noto Serif SC de fallback) |
 
-Google Fonts: `Anta`, `Jua`, `Lato:400,700`, `Noto Serif SC:500,600,700`.
+Google Fonts: `Anta`, `Jua`, `Lato:400,700`, `Noto Serif SC:500,600,700`, `ZCOOL KuaiLe`.
 
 En el código (Tailwind, `resources/css/app.css`): `font-anta`, `font-lato`, `font-hanzi`,
 y colores `ink`, `paper`, `seal`, `seal-dark`, `stone`, `mist`, `line`.
