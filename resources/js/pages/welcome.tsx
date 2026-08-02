@@ -51,7 +51,7 @@ export default function Welcome() {
                                 <span>Personalizar el tuyo</span>
                             </a>
                         </div>
-                        <p className="text-sm text-mist">Mazo Animales: 20 cartas · español, chino y pinyin · $ 400</p>
+                        <p className="text-sm text-mist">Mazo Animales: 20 cartas · español, chino y pinyin · $ 450</p>
                     </section>
 
                     <section className="flex flex-col items-center gap-5">
