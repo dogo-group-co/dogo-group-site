@@ -1,6 +1,8 @@
 import { Head } from '@inertiajs/react';
+import { useState } from 'react';
 
 export default function Welcome() {
+    const [flipped, setFlipped] = useState(false);
     return (
         <>
             <Head title="Dogo Group — Un idioma, carta a carta">
@@ -46,8 +48,16 @@ export default function Welcome() {
                     </section>
 
                     <section className="flex flex-col items-center gap-5">
-                        <div className="group h-[400px] w-60 perspective-[1200px]">
-                            <div className="relative size-full transition-transform duration-500 transform-3d group-hover:rotate-y-180">
+                        <button
+                            type="button"
+                            onClick={() => setFlipped(!flipped)}
+                            aria-pressed={flipped}
+                            aria-label="Dar vuelta la carta"
+                            className="group h-[400px] w-60 cursor-pointer perspective-[1200px]"
+                        >
+                            <div
+                                className={`relative size-full transition-transform duration-500 transform-3d group-hover:rotate-y-180 ${flipped ? 'rotate-y-180' : ''}`}
+                            >
                                 <div className="absolute inset-0 flex flex-col gap-2 rounded-[20px] border border-line bg-white p-4 shadow-[0_12px_32px_rgba(17,17,17,0.08)] backface-hidden">
                                     <div className="flex min-h-0 flex-1 items-center justify-center">
                                         <img
@@ -69,8 +79,8 @@ export default function Welcome() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <p className="text-[13px] text-stone">Pasá el mouse por la carta para darla vuelta</p>
+                        </button>
+                        <p className="text-[13px] text-stone">Pasá el mouse o tocá la carta para darla vuelta</p>
                     </section>
 
                     <p className="max-w-[52ch] text-[15px] text-pretty text-mist">
