@@ -33,7 +33,7 @@ Todo lo demás vive en tinta sobre papel. Selección de texto: fondo rojo sello,
 
 Google Fonts: `Anta`, `Inter:400`, `Lato:400,700`, `Noto Sans SC:400`.
 
-En el código (Tailwind, `resources/css/app.css`): `font-anta`, `font-lato`, `font-hanzi`,
+En el código (Tailwind, `resources/css/app.css`): `font-anta`, `font-lato`, `font-hanzi`, `font-inter`,
 y colores `ink`, `paper`, `seal`, `seal-dark`, `stone`, `mist`, `line`.
 
 ## Logotipo
@@ -47,7 +47,12 @@ y colores `ink`, `paper`, `seal`, `seal-dark`, `stone`, `mist`, `line`.
 ## La carta
 
 - Anverso — español: ilustración + palabra en Lato.
-- Reverso — chino · pinyin: caracteres en Jua/Noto Serif SC + pinyin en Lato.
+- Reverso — chino · pinyin: caracteres en Noto Sans SC + pinyin en Inter.
 - Las dos caras en papel, tinta para el texto. El rojo queda para la marca y el empaque.
 - Proporción de referencia: 288 × 480, borde `#E5E2DA`, radio 20px.
 - Ilustración de ejemplo: `public/images/leon.png`.
+
+## Producto
+
+- Mazo Animales: 20 cartas · español, chino y pinyin · $ 450 (UYU).
+- Pedidos y personalizaciones por WhatsApp.
