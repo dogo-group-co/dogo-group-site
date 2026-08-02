@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dogo-group-site",
+      "runtimeExecutable": "php",
+      "runtimeArgs": ["artisan", "serve", "--port=8000"],
+      "cwd": "/Users/santi/Documents/dogo-group-co/dogo-group-site",
+      "port": 8000
+    }
+  ]
+}
