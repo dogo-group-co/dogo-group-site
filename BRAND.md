@@ -28,9 +28,9 @@ Todo lo demás vive en tinta sobre papel. Selección de texto: fondo rojo sello,
 | ----------------------- | ----------- | -------------------- |
 | Anta                    | 400         | Marca y titulares    |
 | Lato                    | 400 / 700   | Texto de las cartas  |
-| Noto Sans SC            | 500 / 700   | Caracteres chinos (fallback: PingFang SC) |
+| Noto Sans SC            | 300 (light) | Caracteres chinos (fallback: PingFang SC) |
 
-Google Fonts: `Anta`, `Lato:400,700`, `Noto Sans SC:500,700`.
+Google Fonts: `Anta`, `Lato:400,700`, `Noto Sans SC:300`.
 
 En el código (Tailwind, `resources/css/app.css`): `font-anta`, `font-lato`, `font-hanzi`,
 y colores `ink`, `paper`, `seal`, `seal-dark`, `stone`, `mist`, `line`.
