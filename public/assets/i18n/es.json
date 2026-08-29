@@ -1,0 +1,33 @@
+{
+  "brand": "Dogo Group",
+  "header": { "tagline": "Aprendé jugando" },
+  "hero": {
+    "title": "Un idioma, carta a carta.",
+    "description": "Mazos de cartas para aprender vocabulario de verdad: una palabra por carta, una carta a la vez.",
+    "orderAction": "Pedir un mazo",
+    "customizeAction": "Personalizar el tuyo"
+  },
+  "card": {
+    "toggleLabel": "Dar vuelta la carta",
+    "lionAlt": "Ilustración de un león",
+    "word": "león",
+    "pronunciation": "shīzi",
+    "hint": "Tocá la carta para darla vuelta"
+  },
+  "story": "De un lado, la palabra en español. Del otro, el idioma que estás aprendiendo. Sin apps, sin rachas: papel, tinta y memoria.",
+  "product": {
+    "eyebrow": "El primer mazo",
+    "title": "Mazo Animales",
+    "description": "20 cartas · español, chino y pinyin",
+    "price": "$ 450",
+    "orderAction": "Pedir por WhatsApp"
+  },
+  "footer": {
+    "copyright": "© 2026 Dogo Group",
+    "languages": "Chino · primer mazo · más idiomas pronto"
+  },
+  "whatsapp": {
+    "orderMessage": "¡Hola! Quiero pedir el mazo de Animales de Dogo Group.",
+    "customMessage": "¡Hola! Quiero un mazo de cartas personalizado de Dogo Group."
+  }
+}
