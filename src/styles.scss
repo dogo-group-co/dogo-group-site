@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 * {
   box-sizing: border-box;
 }
@@ -28,4 +30,28 @@ a {
   font-feature-settings: 'liga';
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
+}
+
+.catalog__select-panel {
+  border: 1px solid $color-line-strong !important;
+  border-radius: 6px !important;
+  background: $color-surface !important;
+  box-shadow: 0 12px 28px $shadow-panel !important;
+
+  .mat-mdc-option {
+    min-height: 42px;
+    color: $color-ink;
+    font-family: $font-ui;
+    transition: background-color .08s ease, color .08s ease;
+
+    &:hover:not(.mdc-list-item--disabled) {
+      background: $color-green-hover;
+      color: $color-green-dark;
+    }
+
+    &.mdc-list-item--selected:not(.mdc-list-item--disabled) {
+      background: $color-green-selected;
+      color: $color-green-text;
+    }
+  }
 }

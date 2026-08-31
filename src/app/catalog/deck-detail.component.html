@@ -1,0 +1,11 @@
+<main class="deck-detail">
+  @if (deck(); as selectedDeck) {
+    <a class="deck-detail__back" routerLink="/explorar">{{ 'detail.back' | translate }}</a>
+    <section class="deck-detail__content">
+      <div [class]="imageClass(selectedDeck.imageClass)">
+        @if (selectedDeck.image) { <img [src]="selectedDeck.image" [alt]="selectedDeck.imageAltKey | translate"> } @else { <span aria-hidden="true">{{ 'deckArt.' + selectedDeck.imageClass | translate }}</span> }
+      </div>
+      <div class="deck-detail__copy"><span class="deck-detail__status">{{ 'status.' + selectedDeck.status | translate }}</span><p>{{ 'lines.' + selectedDeck.line | translate }}</p><h1>{{ selectedDeck.titleKey | translate }}</h1><p class="deck-detail__description">{{ 'detail.description' | translate }}</p><dl><div><dt>{{ 'catalog.language' | translate }}</dt><dd>{{ 'languages.' + selectedDeck.language | translate }}</dd></div><div><dt>{{ 'catalog.age' | translate }}</dt><dd>{{ 'ages.' + selectedDeck.age | translate }}</dd></div><div><dt>{{ 'catalog.cards' | translate }}</dt><dd>{{ selectedDeck.cardCount }}</dd></div></dl>@if (selectedDeck.id === 'world-and-cultures') { <p class="deck-detail__feature">{{ 'detail.worldFeature' | translate }}</p> }<a class="deck-detail__action" [href]="'whatsapp.orderMessage' | translate | whatsappUrl" target="_blank" rel="noopener noreferrer">{{ 'detail.orderAction' | translate }}</a></div>
+    </section>
+  } @else { <section class="deck-detail__missing"><h1>{{ 'detail.missing.title' | translate }}</h1><a routerLink="/explorar">{{ 'detail.back' | translate }}</a></section> }
+</main>

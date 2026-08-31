@@ -1,78 +1,12 @@
-<div class="landing">
-  <header class="landing__header">
-    <div class="landing__brand">
-      <img class="landing__brand-logo" src="images/logo.svg" [alt]="'brand' | translate">
+<div class="site-shell">
+  <header class="site-shell__header">
+    <a class="site-shell__brand" routerLink="/" (click)="closeMenu()">
+      <img src="images/logo.svg" [alt]="'brand' | translate">
       <span>{{ 'brand' | translate }}</span>
-    </div>
-    <span class="landing__header-tagline">{{ 'header.tagline' | translate }}</span>
+    </a>
+    <button class="site-shell__menu-toggle" type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-controls="primary-navigation"><mat-icon class="material-symbols-outlined" aria-hidden="true">menu</mat-icon><span class="site-shell__sr-only">{{ 'navigation.openMenu' | translate }}</span></button>
+    <nav id="primary-navigation" class="site-shell__navigation" [class.site-shell__navigation--open]="menuOpen()" [attr.aria-label]="'navigation.label' | translate"><a routerLink="/" routerLinkActive="site-shell__link--active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">{{ 'navigation.home' | translate }}</a><a routerLink="/explorar" routerLinkActive="site-shell__link--active" (click)="closeMenu()">{{ 'navigation.explore' | translate }}</a><a routerLink="/ninos" routerLinkActive="site-shell__link--active" (click)="closeMenu()">{{ 'navigation.children' | translate }}</a><a routerLink="/adultos" routerLinkActive="site-shell__link--active" (click)="closeMenu()">{{ 'navigation.adults' | translate }}</a><a routerLink="/examenes" routerLinkActive="site-shell__link--active" (click)="closeMenu()">{{ 'navigation.exams' | translate }}</a></nav>
   </header>
-  <main class="landing__content">
-    <section class="landing__intro">
-      <h1 class="landing__title">{{ 'hero.title' | translate }}</h1>
-      <p class="landing__description">{{ 'hero.description' | translate }}</p>
-      <div class="landing__actions">
-        <a
-          class="landing__action landing__action--primary"
-          [href]="'whatsapp.orderMessage' | translate | whatsappUrl"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <mat-icon class="material-symbols-outlined" aria-hidden="true">chat</mat-icon>
-          <span>{{ 'hero.orderAction' | translate }}</span>
-        </a>
-        <a
-          class="landing__action landing__action--secondary"
-          [href]="'whatsapp.customMessage' | translate | whatsappUrl"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {{ 'hero.customizeAction' | translate }}
-        </a>
-      </div>
-    </section>
-    <section class="landing__card-showcase">
-      <button
-        class="landing__card"
-        type="button"
-        (click)="toggleCard()"
-        [class.landing__card--flipped]="cardFlipped()"
-        [attr.aria-pressed]="cardFlipped()"
-        [attr.aria-label]="'card.toggleLabel' | translate"
-      >
-        <span class="landing__card-inner">
-          <span class="landing__card-face">
-            <span class="landing__card-artwork">
-              <img class="landing__card-image" src="images/leon.png" [alt]="'card.lionAlt' | translate">
-            </span>
-            <span class="landing__card-word">{{ 'card.word' | translate }}</span>
-          </span>
-          <span class="landing__card-face landing__card-face--back">
-            <span class="landing__card-hanzi">狮子</span>
-            <span class="landing__card-pronunciation">{{ 'card.pronunciation' | translate }}</span>
-          </span>
-        </span>
-      </button>
-      <p class="landing__hint">{{ 'card.hint' | translate }}</p>
-    </section>
-    <p class="landing__story">{{ 'story' | translate }}</p>
-    <section class="landing__product">
-      <span class="landing__product-eyebrow">{{ 'product.eyebrow' | translate }}</span>
-      <h2 class="landing__product-title">{{ 'product.title' | translate }}</h2>
-      <p class="landing__product-description">{{ 'product.description' | translate }}</p>
-      <strong class="landing__product-price">{{ 'product.price' | translate }}</strong>
-      <a
-        class="landing__action landing__action--primary landing__product-action"
-        [href]="'whatsapp.orderMessage' | translate | whatsappUrl"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <mat-icon class="material-symbols-outlined" aria-hidden="true">chat</mat-icon>
-        <span>{{ 'product.orderAction' | translate }}</span>
-      </a>
-    </section>
-  </main>
-  <footer class="landing__footer">
-    <span>{{ 'footer.copyright' | translate }}</span>
-    <span>{{ 'footer.languages' | translate }}</span>
-  </footer>
+  <router-outlet />
+  <footer class="site-shell__footer"><span>{{ 'footer.copyright' | translate }}</span></footer>
 </div>

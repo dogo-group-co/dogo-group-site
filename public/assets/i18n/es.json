@@ -1,11 +1,24 @@
 {
   "brand": "Dogo Group",
-  "header": { "tagline": "Aprendé jugando" },
-  "hero": {
+  "navigation": {
+    "label": "Navegación principal",
+    "openMenu": "Abrir menú",
+    "home": "Inicio",
+    "explore": "Explorar mazos",
+    "children": "Niños",
+    "adults": "Adultos",
+    "exams": "Exámenes"
+  },
+  "home": {
+    "eyebrow": "Aprendé jugando",
     "title": "Un idioma, carta a carta.",
     "description": "Mazos de cartas para aprender vocabulario de verdad: una palabra por carta, una carta a la vez.",
-    "orderAction": "Pedir un mazo",
-    "customizeAction": "Personalizar el tuyo"
+    "exploreAction": "Explorar mazos",
+    "customizeAction": "Personalizar el tuyo",
+    "collectionEyebrow": "Colección infantil",
+    "collectionTitle": "Palabras para descubrir el mundo",
+    "collectionDescription": "Temas cercanos, ilustrados y pensados para aprender jugando.",
+    "collectionAction": "Ver mazos para niños"
   },
   "card": {
     "toggleLabel": "Dar vuelta la carta",
@@ -14,20 +27,91 @@
     "pronunciation": "shīzi",
     "hint": "Tocá la carta para darla vuelta"
   },
-  "story": "De un lado, la palabra en español. Del otro, el idioma que estás aprendiendo. Sin apps, sin rachas: papel, tinta y memoria.",
-  "product": {
-    "eyebrow": "El primer mazo",
-    "title": "Mazo Animales",
-    "description": "20 cartas · español, chino y pinyin",
-    "price": "$ 450",
-    "orderAction": "Pedir por WhatsApp"
+  "catalog": {
+    "eyebrow": "Catálogo Dogo",
+    "title": "Explorá los mazos",
+    "description": "Encontrá el mazo indicado para cada etapa, tema e idioma.",
+    "filters": {
+      "label": "Filtros de catálogo",
+      "language": "Idioma",
+      "line": "Línea",
+      "theme": "Temática",
+      "age": "Edad recomendada",
+      "status": "Disponibilidad",
+      "all": "Todos",
+      "clear": "Limpiar filtros"
+    },
+    "results": "{{count}} mazos encontrados",
+    "language": "Idioma",
+    "line": "Línea",
+    "age": "Edad",
+    "cards": "Tarjetas",
+    "viewDetails": "Ver detalles",
+    "premium": "Premium",
+    "empty": {
+      "title": "Todavía no hay mazos en esta selección",
+      "description": "Probá quitando algún filtro o explorá otra línea."
+    }
+  },
+  "detail": {
+    "back": "Volver al catálogo",
+    "description": "Un mazo para practicar palabras útiles y crear conexiones que quedan.",
+    "worldFeature": "Al frente, la bandera. Al dorso, el país, su capital y una frase para aprender en contexto.",
+    "orderAction": "Consultar disponibilidad",
+    "missing": { "title": "No encontramos ese mazo" }
+  },
+  "languages": {
+    "english": "Inglés",
+    "portuguese": "Portugués",
+    "french": "Francés",
+    "chinese": "Chino"
+  },
+  "lines": {
+    "children": "Niños",
+    "adults": "Adultos",
+    "exams": "Exámenes"
+  },
+  "themes": {
+    "animals": "Animales",
+    "food": "Frutas y verduras",
+    "family": "Mi familia",
+    "emotions": "Emociones",
+    "numbers": "Números",
+    "weather": "El tiempo",
+    "world": "Mundo y culturas"
+  },
+  "ages": {
+    "3-6": "3 a 6 años",
+    "4-7": "4 a 7 años",
+    "7-11": "7 a 11 años"
+  },
+  "status": {
+    "available": "Disponible",
+    "comingSoon": "Próximamente"
+  },
+  "deckArt": {
+    "fruit": "",
+    "family": "",
+    "emotions": "",
+    "numbers": "",
+    "weather": "",
+    "world": ""
+  },
+  "decks": {
+    "animals": { "title": "Animales", "imageAlt": "Mazo de animales con un león ilustrado" },
+    "fruitAndVegetables": { "title": "Frutas y verduras", "imageAlt": "Portada del mazo Frutas y verduras" },
+    "myFamily": { "title": "Mi familia", "imageAlt": "Portada del mazo Mi familia" },
+    "basicEmotions": { "title": "Emociones básicas", "imageAlt": "Portada del mazo Emociones básicas" },
+    "numbers": { "title": "Números", "imageAlt": "Portada del mazo Números" },
+    "weather": { "title": "El tiempo", "imageAlt": "Portada del mazo El tiempo" },
+    "worldAndCultures": { "title": "Mundo y culturas", "imageAlt": "Portada del mazo Mundo y culturas" }
   },
   "footer": {
     "copyright": "© 2026 Dogo Group",
     "languages": "Chino · primer mazo · más idiomas pronto"
   },
   "whatsapp": {
-    "orderMessage": "¡Hola! Quiero pedir el mazo de Animales de Dogo Group.",
+    "orderMessage": "¡Hola! Quiero consultar por los mazos de Dogo Group.",
     "customMessage": "¡Hola! Quiero un mazo de cartas personalizado de Dogo Group."
   }
 }

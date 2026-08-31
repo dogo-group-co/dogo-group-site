@@ -1,0 +1,207 @@
+@use '../../variables' as *;
+
+.home {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 64px;
+  width: min(1060px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 88px 0;
+
+  &__intro {
+    align-self: center;
+  }
+
+  &__eyebrow,
+  &__card-showcase p,
+  &__collection p {
+    margin: 0;
+    color: $color-stone;
+    font-family: $font-ui;
+    font-size: 13px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+  }
+
+  h1,
+  h2,
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    max-width: 10ch;
+    font-size: 58px;
+    font-weight: 400;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    max-width: 42ch;
+    margin-top: 24px !important;
+    color: $color-muted;
+    font-family: $font-ui;
+    font-size: 18px;
+    line-height: 1.55;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  &__action,
+  &__collection a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 24px;
+    border: 1px solid $color-ink;
+    border-radius: 999px;
+    color: $color-ink;
+    font-family: $font-ui;
+    text-decoration: none;
+  }
+
+  &__action--primary,
+  &__collection a {
+    border-color: $color-green;
+    background: $color-green;
+    color: $color-surface;
+  }
+
+  &__card-showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__card {
+    width: 240px;
+    height: 400px;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    perspective: 1200px;
+
+    &:hover .home__card-inner,
+    &--flipped .home__card-inner {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &__card-inner {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+  }
+
+  &__card-face {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 1px solid $color-line;
+    border-radius: 20px;
+    background: $color-surface;
+    box-shadow: 0 12px 32px $shadow-card;
+    backface-visibility: hidden;
+
+    &--back {
+      align-items: center;
+      justify-content: center;
+      transform: rotateY(180deg);
+    }
+  }
+
+  &__card-artwork {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__card-artwork img {
+    max-width: 65%;
+    max-height: 65%;
+    object-fit: contain;
+  }
+
+  &__card-word,
+  &__card-pronunciation {
+    padding-bottom: 24px;
+    font-family: $font-ui;
+    font-size: 36px;
+  }
+
+  &__card-hanzi {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 96px;
+    line-height: 1;
+  }
+
+  &__card-pronunciation {
+    padding: 24px 0 0;
+  }
+
+  &__collection {
+    grid-column: 1 / -1;
+    padding: 40px;
+    border: 1px solid $color-line;
+    border-radius: 8px;
+    background: $color-surface;
+  }
+
+  &__collection h2 {
+    margin: 12px 0;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__collection span {
+    display: block;
+    color: $color-muted;
+    font-family: $font-ui;
+  }
+
+  &__collection a {
+    margin-top: 24px;
+  }
+
+  @media (max-width: 720px) {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    width: min(100% - 32px, 1060px);
+    padding: 48px 0;
+    text-align: center;
+
+    &__intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 44px;
+    }
+
+    &__actions,
+    &__action {
+      width: 100%;
+    }
+
+    &__collection {
+      padding: 28px;
+    }
+  }
+}

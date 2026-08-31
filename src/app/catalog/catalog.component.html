@@ -1,0 +1,50 @@
+<main class="catalog">
+  <header class="catalog__heading">
+    <p class="catalog__eyebrow">{{ 'catalog.eyebrow' | translate }}</p>
+    <h1 class="catalog__title">{{ 'catalog.title' | translate }}</h1>
+    <p class="catalog__description">{{ 'catalog.description' | translate }}</p>
+  </header>
+
+  <section class="catalog__filters" [attr.aria-label]="'catalog.filters.label' | translate">
+    <div class="catalog__filter-grid">
+      <label class="catalog__filter">
+        <span>{{ 'catalog.filters.language' | translate }}</span>
+        <mat-select class="catalog__select" panelClass="catalog__select-panel" [placeholder]="'catalog.filters.all' | translate" [value]="filters().language" (selectionChange)="updateFilter('language', $event.value)"><mat-option value="all">{{ 'catalog.filters.all' | translate }}</mat-option><mat-option value="english">{{ 'languages.english' | translate }}</mat-option><mat-option value="portuguese">{{ 'languages.portuguese' | translate }}</mat-option><mat-option value="french">{{ 'languages.french' | translate }}</mat-option><mat-option value="chinese">{{ 'languages.chinese' | translate }}</mat-option></mat-select>
+      </label>
+      <label class="catalog__filter">
+        <span>{{ 'catalog.filters.line' | translate }}</span>
+        <mat-select class="catalog__select" panelClass="catalog__select-panel" [placeholder]="'catalog.filters.all' | translate" [value]="filters().line" (selectionChange)="updateFilter('line', $event.value)"><mat-option value="all">{{ 'catalog.filters.all' | translate }}</mat-option><mat-option value="children">{{ 'lines.children' | translate }}</mat-option><mat-option value="adults">{{ 'lines.adults' | translate }}</mat-option><mat-option value="exams">{{ 'lines.exams' | translate }}</mat-option></mat-select>
+      </label>
+      <label class="catalog__filter">
+        <span>{{ 'catalog.filters.theme' | translate }}</span>
+        <mat-select class="catalog__select" panelClass="catalog__select-panel" [placeholder]="'catalog.filters.all' | translate" [value]="filters().theme" (selectionChange)="updateFilter('theme', $event.value)"><mat-option value="all">{{ 'catalog.filters.all' | translate }}</mat-option>@for (theme of themes; track theme) {<mat-option [value]="theme">{{ 'themes.' + theme | translate }}</mat-option>}</mat-select>
+      </label>
+      <label class="catalog__filter">
+        <span>{{ 'catalog.filters.age' | translate }}</span>
+        <mat-select class="catalog__select" panelClass="catalog__select-panel" [placeholder]="'catalog.filters.all' | translate" [value]="filters().age" (selectionChange)="updateFilter('age', $event.value)"><mat-option value="all">{{ 'catalog.filters.all' | translate }}</mat-option>@for (age of ages; track age) {<mat-option [value]="age">{{ 'ages.' + age | translate }}</mat-option>}</mat-select>
+      </label>
+      <label class="catalog__filter">
+        <span>{{ 'catalog.filters.status' | translate }}</span>
+        <mat-select class="catalog__select" panelClass="catalog__select-panel" [placeholder]="'catalog.filters.all' | translate" [value]="filters().status" (selectionChange)="updateFilter('status', $event.value)"><mat-option value="all">{{ 'catalog.filters.all' | translate }}</mat-option><mat-option value="available">{{ 'status.available' | translate }}</mat-option><mat-option value="comingSoon">{{ 'status.comingSoon' | translate }}</mat-option></mat-select>
+      </label>
+    </div>
+    <button class="catalog__clear" type="button" (click)="clearFilters()">{{ 'catalog.filters.clear' | translate }}</button>
+  </section>
+
+  @if (decks().length) {
+    <p class="catalog__result-count">{{ 'catalog.results' | translate:{ count: decks().length } }}</p>
+    <section class="catalog__grid" [attr.aria-label]="'catalog.title' | translate">
+      @for (deck of decks(); track deck.id) {
+        <article class="catalog__deck">
+          <div [class]="deckImageClass(deck)">
+            @if (deck.image) { <img [src]="deck.image" [alt]="deck.imageAltKey | translate"> } @else { <span aria-hidden="true">{{ 'deckArt.' + deck.imageClass | translate }}</span> }
+            @if (deck.premium) { <span class="catalog__premium">{{ 'catalog.premium' | translate }}</span> }
+          </div>
+          <div class="catalog__deck-content"><span class="catalog__status" [class.catalog__status--available]="deck.status === 'available'">{{ 'status.' + deck.status | translate }}</span><h2>{{ deck.titleKey | translate }}</h2><dl class="catalog__details"><div><dt>{{ 'catalog.language' | translate }}</dt><dd>{{ 'languages.' + deck.language | translate }}</dd></div><div><dt>{{ 'catalog.line' | translate }}</dt><dd>{{ 'lines.' + deck.line | translate }}</dd></div><div><dt>{{ 'catalog.age' | translate }}</dt><dd>{{ 'ages.' + deck.age | translate }}</dd></div><div><dt>{{ 'catalog.cards' | translate }}</dt><dd>{{ deck.cardCount }}</dd></div></dl><a class="catalog__details-link" [routerLink]="['/explorar', deck.id]">{{ 'catalog.viewDetails' | translate }}</a></div>
+        </article>
+      }
+    </section>
+  } @else {
+    <section class="catalog__empty"><h2>{{ 'catalog.empty.title' | translate }}</h2><p>{{ 'catalog.empty.description' | translate }}</p><button type="button" (click)="clearFilters()">{{ 'catalog.filters.clear' | translate }}</button></section>
+  }
+</main>
